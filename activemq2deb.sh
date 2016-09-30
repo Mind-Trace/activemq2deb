@@ -62,7 +62,7 @@ chmod 755 $TMPDIR/etc/init.d/activemq
 fpm -s dir -t deb \
   -n $NAME -v $VERSION --iteration $ITERATION -a all \
   -C $TMPDIR \
-  -d java6-sdk \
+  -d java7-runtime-headless \
   -m 'Rudy Gevaert <Rudy.Gevaert@UGent.be>' \
   --description "Activemq $VERSION" \
   --url 'http://activemq.apache.org/' \
