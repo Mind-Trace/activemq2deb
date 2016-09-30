@@ -1,5 +1,6 @@
 #!/bin/bash
 
+NAME=mindtrace-activemq
 VERSION=$1
 ITERATION=$2
 
@@ -59,7 +60,7 @@ cp init $TMPDIR/etc/init.d/activemq
 chmod 755 $TMPDIR/etc/init.d/activemq
 
 fpm -s dir -t deb \
-  -n activemq -v $VERSION --iteration $ITERATION -a all \
+  -n $NAME -v $VERSION --iteration $ITERATION -a all \
   -C $TMPDIR \
   -d java6-sdk \
   -m 'Rudy Gevaert <Rudy.Gevaert@UGent.be>' \
